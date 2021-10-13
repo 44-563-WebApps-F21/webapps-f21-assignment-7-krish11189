@@ -29,38 +29,80 @@
 
     <div class="container-fluid float-center mx-auto">
         <div class="image-row d-flex justify-content-center">
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
+            <div><img id="pic-0" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(0)"></div>
+            <div><img id="pic-1" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(1)"></div>
+            <div><img id="pic-2" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(2)"></div>
+            <div><img id="pic-3" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(3)"></div>
+            <div><img id="pic-4" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(4)"></div>
+            <div><img id="pic-5" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(5)"></div>
         </div>
         <div class="image-row d-flex justify-content-center">
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
+            <div><img id="pic-6" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(6)"></div>
+            <div><img id="pic-7" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(7)"></div>
+            <div><img id="pic-8" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(8)"></div>
+            <div><img id="pic-9" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(9)"></div>
+            <div><img id="pic-10" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(10)"></div>
+            <div><img id="pic-11" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(11)"></div>
         </div>
         <div class="image-row d-flex justify-content-center">
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
+            <div><img id="pic-12" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(12)"></div>
+            <div><img id="pic-13" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(13)"></div>
+            <div><img id="pic-14" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(14)"></div>
+            <div><img id="pic-15" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(15)"></div>
+            <div><img id="pic-16" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(16)"></div>
+            <div><img id="pic-17" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(17)"></div>
         </div>
         <div class="image-row d-flex justify-content-center">
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
-            <div><img src="./images/tree.jpg" alt="tree" height="100" width="100"></div>
+            <div><img id="pic-18" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(18)"></div>
+            <div><img id="pic-19" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(19)"></div>
+            <div><img id="pic-20" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(20)"></div>
+            <div><img id="pic-21" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(21)"></div>
+            <div><img id="pic-22" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(22)"></div>
+            <div><img id="pic-23" src="./images/tree.jpg" alt="tree" height="100" width="100" onclick="check(23)"></div>
         </div>
     </div>
+
+    <script>
+        var ids = []
+        for (var i = 0; i < 24; i++)
+            ids.push("pic-" + i)
+
+        var triesCount = 0
+        var animalLocation = 13
+        function check(position) {
+            var picId = ids[position]
+            pic_src = document.getElementById(picId)
+            if (position == animalLocation)
+                pic_src.src = "./images/squirrel.jpg"
+            else
+                pic_src.src = "./images/dirt.jpg"
+
+            triesCount++
+            document.getElementById("tries").innerHTML = "Number of tries is " + triesCount
+            document.getElementById("distance").innerHTML = "Distance is " + distance(position, animalLocation)
+        }
+        function distance(pos1, pos2) {
+            var horDist = Math.abs(getPosition(pos1)[0] - getPosition(pos2)[0])
+            var vertDist = Math.abs(getPosition(pos1)[1] - getPosition(pos2)[1])
+            if (horDist > vertDist)
+                return horDist
+            else
+                return vertDist
+        }
+        function getPosition(value) {
+            var eleVal = 0
+            for(var i=0; i<4; i++){
+                for(var j=0; j<6; j++){
+                    if(eleVal == value){
+                        return [i+1, j+1]
+                    }
+                    eleVal++
+                }
+            }
+        }
+        
+        
+    </script>
 
 
 
